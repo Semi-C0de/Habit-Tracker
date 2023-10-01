@@ -9,19 +9,22 @@ import SwiftUI
 
 struct HabitsListView: View {
     
-    @State private var activities:[Activity] = [
-        
-        Activity(name: "Drink Water", times: 0),
-        Activity(name: "Exercise", times: 6),
-        Activity(name: "Something Else", times: 0)
+//    @State private var activities:[Activity] = [
+//        
+//        Activity(name: "Drink Water", times: 0),
+//        Activity(name: "Exercise", times: 6),
+//        Activity(name: "Something Else", times: 0)
+//    
+//    ]
     
-    ]
+    @StateObject var activityDataController = DataController<Activity>(entityName: "Activity", containerName: "Habit_Tracker")
+
     
     var body: some View {
         Form {
-            ForEach(self.activities, id: \.id) {activity in
+            ForEach(activityDataController.savedEntities, id: \.id) {activity in
                 
-                ListItem(activity: activity)
+                ListItem(activityDataController: self.activityDataController, activity: activity)
             }
         }
         .navigationTitle("Habit Tracker")
@@ -29,6 +32,20 @@ struct HabitsListView: View {
             ToolbarItem {
                 NavigationLink(destination: HabitCircle()){
                     Image(systemName: "star.circle")
+                }
+            }
+            
+            ToolbarItem {
+                Button {
+                    withAnimation {
+                        self.activityDataController.add({
+                            $0.name = "test"
+                            $0.times64 = 6
+                            $0.id = UUID()
+                        })
+                    }
+                } label: {
+                    Image(systemName: "plus.circle")
                 }
             }
         }

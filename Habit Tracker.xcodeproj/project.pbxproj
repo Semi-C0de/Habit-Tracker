@@ -7,7 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1C746A5C2AC9397A008F26FD /* ActivityExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C746A5B2AC9397A008F26FD /* ActivityExtension.swift */; };
 		1C8C1F5F2AC918810051DBFF /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C1F5E2AC918810051DBFF /* ListItem.swift */; };
+		1C8C1F632AC936380051DBFF /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C1F622AC936380051DBFF /* DataController.swift */; };
+		1C8C1F662AC936F40051DBFF /* Habit_Tracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1C8C1F642AC936F40051DBFF /* Habit_Tracker.xcdatamodeld */; };
 		1CC26CB12AC477A300DC158D /* ColorExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CC26CB02AC477A300DC158D /* ColorExtension.swift */; };
 		1CEB22B42AC8AABB009742A0 /* HabitCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEB22B32AC8AABB009742A0 /* HabitCircle.swift */; };
 		1CEC17342AC25161004098FC /* Habit_TrackerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1CEC17332AC25161004098FC /* Habit_TrackerApp.swift */; };
@@ -17,7 +20,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C746A5B2AC9397A008F26FD /* ActivityExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityExtension.swift; sourceTree = "<group>"; };
 		1C8C1F5E2AC918810051DBFF /* ListItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		1C8C1F622AC936380051DBFF /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
+		1C8C1F652AC936F40051DBFF /* Habit_Tracker.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Habit_Tracker.xcdatamodel; sourceTree = "<group>"; };
 		1CC26CB02AC477A300DC158D /* ColorExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ColorExtension.swift; sourceTree = "<group>"; };
 		1CEB22B32AC8AABB009742A0 /* HabitCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCircle.swift; sourceTree = "<group>"; };
 		1CEC17302AC25161004098FC /* Habit Tracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Habit Tracker.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -59,7 +65,10 @@
 			children = (
 				1CEC17332AC25161004098FC /* Habit_TrackerApp.swift */,
 				1CEC17352AC25161004098FC /* HabitsListView.swift */,
+				1C8C1F622AC936380051DBFF /* DataController.swift */,
+				1C8C1F642AC936F40051DBFF /* Habit_Tracker.xcdatamodeld */,
 				1C8C1F5E2AC918810051DBFF /* ListItem.swift */,
+				1C746A5B2AC9397A008F26FD /* ActivityExtension.swift */,
 				1CEB22B32AC8AABB009742A0 /* HabitCircle.swift */,
 				1CC26CB02AC477A300DC158D /* ColorExtension.swift */,
 				1CEC17372AC25162004098FC /* Assets.xcassets */,
@@ -147,7 +156,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1C8C1F5F2AC918810051DBFF /* ListItem.swift in Sources */,
+				1C8C1F632AC936380051DBFF /* DataController.swift in Sources */,
+				1C8C1F662AC936F40051DBFF /* Habit_Tracker.xcdatamodeld in Sources */,
 				1CEC17362AC25161004098FC /* HabitsListView.swift in Sources */,
+				1C746A5C2AC9397A008F26FD /* ActivityExtension.swift in Sources */,
 				1CEC17342AC25161004098FC /* Habit_TrackerApp.swift in Sources */,
 				1CC26CB12AC477A300DC158D /* ColorExtension.swift in Sources */,
 				1CEB22B42AC8AABB009742A0 /* HabitCircle.swift in Sources */,
@@ -356,6 +368,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		1C8C1F642AC936F40051DBFF /* Habit_Tracker.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				1C8C1F652AC936F40051DBFF /* Habit_Tracker.xcdatamodel */,
+			);
+			currentVersion = 1C8C1F652AC936F40051DBFF /* Habit_Tracker.xcdatamodel */;
+			path = Habit_Tracker.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = 1CEC17282AC25161004098FC /* Project object */;
 }
