@@ -26,10 +26,24 @@ struct ListItem: View {
             })
     }
     
+    var editedName: Binding<String> {
+        Binding<String>(
+            get: {
+                return activity.displayName
+            },
+            set: { newValue in
+                
+                activityDataController.update(obj: self.activity, {
+                    $0.name = newValue
+                })
+                
+            })
+    }
+    
     var body: some View {
         
         HStack {
-            Text(activity.displayName)
+            TextField("Name", text: self.editedName)
             
             Spacer()
             Stepper("\(activity.times)", value: editedRating, in: 0...6)

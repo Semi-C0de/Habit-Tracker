@@ -30,7 +30,7 @@ struct HabitsListView: View {
         .navigationTitle("Habit Tracker")
         .toolbar {
             ToolbarItem {
-                NavigationLink(destination: HabitCircle()){
+                NavigationLink(destination: HabitCircle(activityDataController: self.activityDataController)){
                     Image(systemName: "star.circle")
                 }
             }
